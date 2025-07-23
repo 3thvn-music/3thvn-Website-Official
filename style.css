@@ -351,4 +351,7 @@ body {
   width: 100px;
   animation: pulse 1.5s infinite ease-in-out;
 }
+.nav-header, .nav-header a {
+  font-family: 'Orbitron', sans-serif;
+}
 
