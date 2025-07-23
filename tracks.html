@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tracks by 3THVN - Listen on Spotify & YouTube" />
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:title" content="3THVN Tracks - EDM & Visuals" />
+  <meta property="og:description" content="Explore 3THVN's latest EDM tracks on Spotify and YouTube." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/XyannPlays/Image/main/logo.png" />
+  <meta property="og:url" content="https://3thvnofficial.wixstudio.io/mysite" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Tracks | 3THVN</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- Icons & Favicon -->
+  <link rel="icon" href="favicon.ico" />
+  <script src="https://kit.fontawesome.com/a2d9d2d4b3.js" crossorigin="anonymous"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      transition: opacity 0.5s ease-out, visibility 0.5s;
+    }
+
+    #preloader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    #preloader img {
+      width: 100px;
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.2);
+        opacity: 0.6;
+      }
+    }
+
+    .section-bg {
+      padding: 100px 20px;
+      min-height: 100vh;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    iframe {
+      border: none;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    iframe:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+
+    .track-links {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .track-links a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border: 2px solid #0ff;
+      border-radius: 8px;
+      color: inherit;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .track-links a:hover {
+      background: #0ff;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body class="loading">
+  <!-- Preloader -->
+  <div id="preloader">
+    <img src="https://raw.githubusercontent.com/XyannPlays/Image/main/logo.png" alt="3THVN Logo">
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav-header">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="tracks.html" class="active">Tracks</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" title="Toggle Theme">⏾</button>
+
+  <!-- Hero Section -->
+  <section class="hero interactive-hero">
+    <div class="overlay"></div>
+    <h1 class="glow" data-aos="fade-down">Explore the Sound</h1>
+    <p class="subtext" data-aos="fade-up">Immerse yourself in the sonic world of 3THVN</p>
+  </section>
+
+  <!-- Tracks Embed Section -->
+  <section class="section-bg" id="tracks">
+    <div data-aos="fade-up" data-aos-delay="200">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/1VjjO3YVs3RPlfhW423tDB?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    <div class="track-links" data-aos="zoom-in" data-aos-delay="400">
+      <a href="https://youtube.com/@3thvn.official?si=CVxWqMsmiECsUJnh" target="_blank">
+        <i class="fab fa-youtube"></i> Watch on YouTube
+      </a>
+      <a href="https://open.spotify.com/artist/1VjjO3YVs3RPlfhW423tDB?si=pypcJdPzThKJxnmBU0mRsQ" target="_blank">
+        <i class="fab fa-spotify"></i> Listen on Spotify
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 3THVN. All rights reserved.
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: false,
+      duration: 800,
+      easing: 'ease-in-out'
+    });
+  </script>
+
+  <!-- Preloader Script -->
+  <script>
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      preloader.classList.add("hidden");
+      document.body.classList.remove("loading");
+    });
+  </script>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    function updateThemeEmoji() {
+      toggleBtn.textContent = document.body.classList.contains("light-theme") ? "⏾" : "☼";
+    }
+    if (!prefersDark) document.body.classList.add("light-theme");
+    updateThemeEmoji();
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("light-theme");
+      updateThemeEmoji();
+    });
+  </script>
+</body>
+
+</html>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>
