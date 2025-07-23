@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="3THVN Official EDM Music Artist - Listen, Watch, Connect" />
+  <meta name="theme-color" content="#000000" />
+  <title>Contact | 3THVN</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://raw.githubusercontent.com/XyannPlays/Image/main/logo.png" type="image/png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/a2d9d2d4b3.js" crossorigin="anonymous"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact 3THVN - Reach Out for Collaborations and Inquiries" />
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:title" content="Contact 3THVN - EDM Artist" />
+  <meta property="og:description" content="Reach out to 3THVN for music collaborations and inquiries." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/XyannPlays/Image/main/logo.png" />
+  <meta property="og:url" content="https://3thvnofficial.wixstudio.io/mysite" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Contact | 3THVN</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- Icons & Favicon -->
+  <link rel="icon" href="favicon.ico" />
+  <script src="https://kit.fontawesome.com/a2d9d2d4b3.js" crossorigin="anonymous"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <img src="https://raw.githubusercontent.com/XyannPlays/Image/main/logo.png" alt="3THVN Logo" />
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav-header">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="tracks.html">Tracks</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" title="Toggle Theme">⏾</button>
+
+  <!-- Hero Section -->
+  <section class="hero interactive-hero">
+    <div class="overlay"></div>
+    <h1 class="glow" data-aos="fade-up">Let's Connect</h1>
+    <p class="subtext" data-aos="zoom-in">Reach out, collaborate, or just say hi.</p>
+    <div class="soundwave" id="visualizer"></div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="section-bg" id="contact">
+    <div class="contact-container" data-aos="fade-up">
+      <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <textarea name="message" placeholder="Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <h3>Follow 3THVN</h3>
+        <p>Email: 3thvn.official@gmail.com</p>
+        <p>
+          <a href="https://instagram.com/3thvn.official" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </p>
+        <p>
+          <a href="https://youtube.com/@3thvn" target="_blank">
+            <i class="fab fa-youtube"></i> YouTube
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 3THVN. All rights reserved.
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: false, duration: 800, easing: 'ease-in-out' });
+  </script>
+
+<script>
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("hidden");
+  });
+</script>
+
+
+  <!-- Theme Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    function updateThemeEmoji() {
+      toggleBtn.textContent = document.body.classList.contains("light-theme") ? "⏾" : "☼";
+    }
+    if (!prefersDark) document.body.classList.add("light-theme");
+    updateThemeEmoji();
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("light-theme");
+      updateThemeEmoji();
+    });
+  </script>
+
+  <!-- Soundwave Visualizer -->
+  <script>
+    const visualizer = document.getElementById("visualizer");
+    let pulse = 0;
+    setInterval(() => {
+      pulse = (pulse + 1) % 10;
+      const shadowColor = document.body.classList.contains("light-theme") ? "black" : "white";
+      visualizer.style.boxShadow = `0 0 ${pulse * 2}px ${shadowColor}`;
+    }, 200);
+  </script>
+</body>
+
+</html>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>
