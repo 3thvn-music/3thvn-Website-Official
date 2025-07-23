@@ -164,18 +164,30 @@
 
   <!-- Theme Toggle Script -->
   <script>
-    const toggleBtn = document.getElementById("theme-toggle");
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    function updateThemeEmoji() {
-      toggleBtn.textContent = document.body.classList.contains("light-theme") ? "⏾" : "☼";
-    }
-    if (!prefersDark) document.body.classList.add("light-theme");
+  const toggleBtn = document.getElementById("theme-toggle");
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  // Load theme from localStorage or default
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light") {
+    document.body.classList.add("light-theme");
+  } else if (!savedTheme && !prefersDark) {
+    document.body.classList.add("light-theme");
+  }
+
+  function updateThemeEmoji() {
+    toggleBtn.textContent = document.body.classList.contains("light-theme") ? "⏾" : "☼";
+  }
+
+  updateThemeEmoji();
+
+  toggleBtn.addEventListener("click", () => {
+    const isLight = document.body.classList.toggle("light-theme");
+    localStorage.setItem("theme", isLight ? "light" : "dark");
     updateThemeEmoji();
-    toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("light-theme");
-      updateThemeEmoji();
-    });
-  </script>
+  });
+</script>
+
 </body>
 
 </html>
