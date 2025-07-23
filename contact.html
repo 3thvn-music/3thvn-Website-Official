@@ -132,7 +132,14 @@
   });
 </script>
 
-
+  <!-- Preloader Script -->
+  <script>
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      preloader.classList.add("hidden");
+    });
+  </script>
+  
   <!-- Theme Toggle Script -->
 <script>
   const toggleBtn = document.getElementById("theme-toggle");
